@@ -56,7 +56,7 @@ public class MainFragment extends Fragment implements OnClick {
     public void onClick(Contact continents) {
         Toast.makeText(requireActivity(), " " + continents.getName(), Toast.LENGTH_SHORT).show();
         MainActivity activity = (MainActivity) requireActivity();
-
+        MainActivity.isMainFragment = false;
         Bundle bundle = new Bundle();
         Fragment fragment = new CountryFlagsFragment();
         bundle.putString(st, continents.getName());
